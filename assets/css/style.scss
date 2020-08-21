@@ -723,6 +723,31 @@ li {
 	outline: none;
 }
 
+.app-shot-one__carousel .owl-item {
+	 img{
+		width:80%;
+		margin-left:10%;
+		position: relative;
+	}
+	.shotOverlay {
+		width: 80%;
+		height: 100%;
+		background: #888;
+		position: absolute;
+		z-index: 1000000;
+		top: 0;
+		left: 10%;
+		background: radial-gradient(transparent -30%, #333333d6);
+		transition:.35s all ease-in-out;
+		
+	}
+	&:hover{
+		.shotOverlay{
+			//transform: translateY(100%);
+			opacity:.1;
+		}
+	}
+}
 /*--------------------------------------------------------------
 # Main Menu
 --------------------------------------------------------------*/
@@ -1401,10 +1426,10 @@ li {
 
 .banner-one__bg {
 	position: absolute;
-	top: -280px;
-	right: -525px;
-	height: 993px;
-	width: 1167px;
+	top: -200px;
+	right: -250px;
+	height: 851px;
+	width: 1000px;
 	z-index: -1;
 }
 
@@ -1630,7 +1655,7 @@ li {
 
 .service-one__single .text h3 {
 	color: var(--thm-black);
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 600;
 	line-height: 30px;
 	padding: 28px 0 20px;
@@ -2387,8 +2412,8 @@ li {
 	background-image: url(../images/app-shots/app-screen-moc6.png);
 	background-position: center center;
 	background-repeat: no-repeat;
-	width: 305px;
-	height: 651px;
+	width: 350px;
+	height: 750px;
 	background-size: 100% auto;
 	box-shadow: 0px 0px 60px 0px rgba(5, 5, 6, 0.05);
 }
@@ -2404,7 +2429,7 @@ li {
 	}
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1199px) {
 	.app-shot-one .app-shot-one__carousel:before {
 		-webkit-transform: translate(-50%, -49%) scale(0.8);
 		transform: translate(-50%, -49%) scale(0.8);
@@ -2879,8 +2904,8 @@ li {
 }
 
 .brand-one__carousel img:hover {
-	opacity: .6;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	opacity: .8;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 
 /*--------------------------------------------------------------
@@ -2967,60 +2992,51 @@ li {
 
 .footer-widget__social {
 	padding: 37px 0 29px 0;
+	li {
+		list-style: none;
+		display: inline-block;
+		margin-right: 6px;
+		a {
+			color: #ffffff;
+			height: 40px;
+			width: 40px;
+			border-radius: 50px;
+			background: var(--thm-primary);
+			display: inline-block;
+			line-height: 40px;
+			-webkit-transition: all 500ms ease;
+			transition: all 500ms ease;
+			i{
+				line-height: 40px;
+			}
+			&.color-1 {
+				background: #5798fe;
+				&:hover {
+					color: #5798fe;
+					background-color: #fff;
+				}
+			}
+			&.color-2 {
+				background: var(--thm-base);
+				&:hover {
+					color: var(--thm-base);
+					background-color: #fff;
+				}
+			}
+			&.color-3 {
+				background: #56cc61;
+				&:hover {
+					color: #56cc61;
+					background-color: #fff;
+				}
+			}
+		}	
+	}
 }
-
-.footer-widget__social li {
-	list-style: none;
-	display: inline-block;
-	margin-right: 6px;
-}
-
-.footer-widget__social li a {
-	color: #ffffff;
-	height: 40px;
-	width: 40px;
-	border-radius: 50px;
-	background: var(--thm-primary);
-	display: inline-block;
-	line-height: 40px;
-	-webkit-transition: all 500ms ease;
-	transition: all 500ms ease;
-}
-
-.footer-widget__social li a.color-1 {
-	background: #5798fe;
-}
-
-.footer-widget__social li a.color-1:hover {
-	color: #5798fe;
-	background-color: #fff;
-}
-
-.footer-widget__social li a.color-2 {
-	background: var(--thm-base);
-}
-
-.footer-widget__social li a.color-2:hover {
-	color: var(--thm-base);
-	background-color: #fff;
-}
-
-.footer-widget__social li a.color-3 {
-	background: #56cc61;
-}
-
-.footer-widget__social li a.color-3:hover {
-	color: #56cc61;
-	background-color: #fff;
-}
-
-
 
 .footer-menu {
 	padding-bottom: 6px;
 }
-
-
 
 .footer-menu ul li {
 	list-style: none;
